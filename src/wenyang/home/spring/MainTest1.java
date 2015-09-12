@@ -4,6 +4,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cn.com.xalead.spring.IMessage;
+import cn.com.xalead.spring.Message;
 import cn.com.xalead.spring.user.UserAction;
 
 public class MainTest1 {
@@ -18,6 +19,26 @@ public class MainTest1 {
 //		bf.getBean("a1");
 		UserAction ua =(UserAction) bf.getBean("userAction");
 		ua.excute();	
+		System.out.println(ua.hashCode());
+		ua =(UserAction) bf.getBean("userAction");
+		ua.excute();	
+		System.out.println(ua.hashCode());
+		/**
+		 * 
+		 * */
+
+		Message m =(Message)bf.getBean("a1");
+		/*
+		 * list demo
+		 * */
+		System.out.println(m.getChildren().size());
+		System.out.println(m.getChildren().get(0));
+		/**
+		 * hm
+		 * */
+		String key0 = m.getHm().keySet().toString();
+		System.out.println(key0);
+		
 	}
 
 }
