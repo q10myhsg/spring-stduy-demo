@@ -4,5 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
    	<bean id="a1" class="cn.com.xalead.spring.Message"/>  
-   	<bean id="a2" class="cn.com.xalead.spring.NewMesssage"/>   	
+   	<bean id="a2" class="cn.com.xalead.spring.NewMesssage"/> 
+   	
+   	<bean id="userManager" class="cn.com.xalead.spring.user.UserManager" />
+   	<bean id="userAction" class="cn.com.xalead.spring.user.UserAction" >
+   		<property name="manager" ref="userManager"></property>
+   	</bean>
+   	  	  	
 </beans>

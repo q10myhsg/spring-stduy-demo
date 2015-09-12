@@ -4,6 +4,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import cn.com.xalead.spring.IMessage;
+import cn.com.xalead.spring.user.UserAction;
 
 public class MainTest1 {
 
@@ -15,7 +16,8 @@ public class MainTest1 {
 		IMessage msg = (IMessage) bf.getBean("a1");
 		System.out.println(msg.getMessage());
 //		bf.getBean("a1");
-
+		UserAction ua =(UserAction) bf.getBean("userAction");
+		ua.excute();	
 	}
 
 }
