@@ -38,7 +38,4 @@ public class ConstructDemo {
 		this.m = m;
 	}
 
-
-	
-			
 }
