@@ -3,6 +3,8 @@ package cn.com.xalead.spring;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+@Component("message")
 public class Message implements IMessage {
 	/* (non-Javadoc)
 	 * @see cn.com.xalead.spring.IMessage#getMessage()
@@ -14,7 +16,7 @@ public class Message implements IMessage {
 	
 	@Override
 	public String getMessage()	{
-		return  name;
+		return  "message!!!";
 	}
 
 	public String getName() {

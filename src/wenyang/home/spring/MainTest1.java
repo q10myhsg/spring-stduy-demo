@@ -44,6 +44,8 @@ public class MainTest1 {
 		System.out.println(cd.getCount());
 		System.out.println(cd.getName());
 		
+		System.out.println("userId:"+cd.getM().getMessage());
+		
 	}
 
 }
