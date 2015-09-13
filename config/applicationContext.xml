@@ -34,8 +34,8 @@
    	</bean>
    	
    	<bean id="constructDemo" class="cn.com.xalead.spring.ConstructDemo">
-   		<constructor-arg value="1" />
-   		<constructor-arg value="hello" />
+   		<constructor-arg  value="1" />
+   		<constructor-arg   value="hello" />
    	</bean> 
    	  	  	
 </beans>

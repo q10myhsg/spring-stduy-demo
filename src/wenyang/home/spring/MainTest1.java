@@ -3,6 +3,7 @@ package wenyang.home.spring;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import cn.com.xalead.spring.ConstructDemo;
 import cn.com.xalead.spring.IMessage;
 import cn.com.xalead.spring.Message;
 import cn.com.xalead.spring.user.UserAction;
@@ -39,7 +40,9 @@ public class MainTest1 {
 		String key0 = m.getHm().keySet().toString();
 		System.out.println(key0);
 		
-//		ConstructDemo cd = bf.g
+		ConstructDemo cd = (ConstructDemo) bf.getBean("constructDemo");
+		System.out.println(cd.getCount());
+		System.out.println(cd.getName());
 		
 	}
 
