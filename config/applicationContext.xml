@@ -16,7 +16,9 @@
       <context:annotation-config />
       <context:component-scan base-package="cn.com.xalead.spring"></context:component-scan>
       <context:component-scan base-package="wenyang.home.spring"></context:component-scan>
-   	  
+   	  <bean id="wenyang" class="cn.com.xalead.spring.DynamicProxyFactory" factory-method="newInstance">
+   	  		
+   	  </bean>
    	  <!-- 
    	  <bean id="a1" class="cn.com.xalead.spring.Message">
    		<property name="name">
